@@ -1,0 +1,26 @@
+# app.py
+def list_expenses():
+    if not expenses:
+        print("Nenhuma despesa registrada.")
+        return
+    print("\nLista de Despesas:")
+    for i, expense in enumerate(expenses, start=1):
+        print(f"{i}. {expense['description']} - R${expense['amount']:.2f} - {expense['date']}")
+
+
+if _name_ == "_main_":
+    while True:
+        print("\n1. Adicionar despesa\n2. Listar despesas\n3. Sair")
+        choice = input("Escolha uma opção: ")
+        if choice == "1":
+            desc = input("Descrição: ")
+            amt = input("Valor: ")
+            dt = input("Data (AAAA-MM-DD): ")
+            add_expense(desc, amt, dt)
+        elif choice == "2":
+            list_expenses()
+        elif choice == "3":
+            print("Saindo...")
+            break
+        else:
+            print("Opção inválida!")
