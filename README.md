@@ -21,9 +21,3 @@ Desenvolver uma aplicação de linha de comando para gerenciar despesas pessoais
 | Calcular Total            | Somar o total das despesas          | 2 dias (12/12)   |
 | Exportar para CSV         | Salvar dados em um arquivo CSV      | 2 dias (14/12)   |
 | Testes e Documentação     | Testar e documentar o projeto       | 3 dias (17/12)   |
-
-## Como Usar  
-Clone o repositório, instale os requisitos e execute o script Python.  
-
-## Como Contribuir  
-Abra um pull request explicando as alterações sugeridas.
