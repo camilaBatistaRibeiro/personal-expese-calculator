@@ -1,0 +1,24 @@
+# app.py
+expenses = []  # Lista para armazenar as despesas
+
+
+def add_expense(description, amount, date):
+    expense = {"description": description, "amount": float(amount), "date": date}
+    expenses.append(expense)
+    print(f"Despesa adicionada: {expense}")
+
+
+if _name_ == "_main_":
+    while True:
+        print("\n1. Adicionar despesa\n2. Sair")
+        choice = input("Escolha uma opção: ")
+        if choice == "1":
+            desc = input("Descrição: ")
+            amt = input("Valor: ")
+            dt = input("Data (AAAA-MM-DD): ")
+            add_expense(desc, amt, dt)
+        elif choice == "2":
+            print("Saindo...")
+            break
+        else:
+            print("Opção inválida!")
