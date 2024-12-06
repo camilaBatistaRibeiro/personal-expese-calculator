@@ -1,0 +1,35 @@
+# app.py
+import csv
+
+
+def export_to_csv(filename="expenses.csv"):
+    if not expenses:
+        print("Nenhuma despesa para exportar.")
+        return
+    with open(filename, mode="w", newline="") as file:
+        writer = csv.DictWriter(file, fieldnames=["description", "amount", "date"])
+        writer.writeheader()
+        writer.writerows(expenses)
+    print(f"Despesas exportadas para {filename}")
+
+
+if _name_ == "_main_":
+    while True:
+        print("\n1. Adicionar despesa\n2. Listar despesas\n3. Calcular total\n4. Exportar para CSV\n5. Sair")
+        choice = input("Escolha uma opção: ")
+        if choice == "1":
+            desc = input("Descrição: ")
+            amt = input("Valor: ")
+            dt = input("Data (AAAA-MM-DD): ")
+            add_expense(desc, amt, dt)
+        elif choice == "2":
+            list_expenses()
+        elif choice == "3":
+            calculate_total()
+        elif choice == "4":
+            export_to_csv()
+        elif choice == "5":
+            print("Saindo...")
+            break
+        else:
+            print("Opção inválida!")
