@@ -1,0 +1,24 @@
+# app.py
+def calculate_total():
+    total = sum(expense["amount"] for expense in expenses)
+    print(f"\nTotal gasto: R${total:.2f}")
+
+
+if _name_ == "_main_":
+    while True:
+        print("\n1. Adicionar despesa\n2. Listar despesas\n3. Calcular total\n4. Sair")
+        choice = input("Escolha uma opção: ")
+        if choice == "1":
+            desc = input("Descrição: ")
+            amt = input("Valor: ")
+            dt = input("Data (AAAA-MM-DD): ")
+            add_expense(desc, amt, dt)
+        elif choice == "2":
+            list_expenses()
+        elif choice == "3":
+            calculate_total()
+        elif choice == "4":
+            print("Saindo...")
+            break
+        else:
+            print("Opção inválida!")
